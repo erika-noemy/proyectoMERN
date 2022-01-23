@@ -5,16 +5,16 @@ import AdiosMundo from './componentes/AdiosMundo';
 import Saludar from './componentes/Saludar';
 
 function App() {
-  const username = "noemy";
-  const edad = "23";
+  const username = "noemy chu";
+  const edad = 23;
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <HolaMundo/>
         <AdiosMundo/>
-        <Saludar name = "Erika noe" edad="23" />
-        
+        <Saludar  name={username} edad={edad} />
+
       </header>
     </div>
   );
