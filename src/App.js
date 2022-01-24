@@ -5,12 +5,10 @@ import AdiosMundo from './componentes/AdiosMundo';
 import Saludar from './componentes/Saludar';
 
 function App() {
-
   const user = {
     nombre: "akire",
     edad: 26,
     color: "lila"
-
   };
 
   const saludarFn= (name)=> {

@@ -1,13 +1,14 @@
 import React from "react";
 export default function Saludar (props){
-    console.log(props.userInfo.color);
-
-    console.log(props);
-    
+   
+    const { userInfo, saludarFn} = props; //asignacion por destructuring
+    const {nombre} =userInfo
+    console.log(userInfo);
     return(
         <div>
             <button onClick={()=>
-                {props.saludarFn(props.userInfo.nombre)}}> Saludar</button>
+                {saludarFn(nombre)}}> Saludar
+            </button>
         </div>
     )
 }
