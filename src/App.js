@@ -1,25 +1,20 @@
 import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
-import Saludar from './componentes/Saludar';
 
 function App() {
-  const user = {
-    nombre: "erika",
-    edad: 26,
-    color: "lila"
-  };
 
-  const saludarFn= (nombre,edad)=> {
-    console.log("hola " + nombre + "tiene " + edad + " años");
+  const [stateCar , setStateCar] = useState (false); 
 
-    console.log(`hola ${nombre}, tiene ${edad} años. `)
-  }
+  const encenderApagar = () => {
+    console.log("Encender/ Apagar");
+  } 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-      
-        <Saludar  userInfo = {user} saludarFn= {saludarFn} />
+        <h3>el coche esta : {stateCar}</h3>
+        <button onClick={encenderApagar}>Encender / Apagar</button>
 
       </header>
     </div>
